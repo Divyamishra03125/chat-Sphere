@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+# 🌐 ChatSphere — AI Assistant
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, feature-rich AI chat application built with React. ChatSphere delivers a premium ChatGPT-like experience with a clean dark UI, markdown rendering, image generation, and conversation history.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## ✨ Features
 
-### `npm start`
+- 💬 **Real AI Responses** — powered by Groq Cloud (Llama 3.3 70B) or OpenAI
+- 🧠 **Conversation Memory** — full chat history sent with every request for contextual answers
+- 🎨 **AI Image Generation** — type "image of..." and get a real AI-generated image via Pollinations AI
+- 📝 **Markdown Rendering** — headings, bold, code blocks, tables, bullet points all rendered beautifully
+- 🌗 **Dark Mode UI** — sleek dark navy theme with glassmorphism effects
+- 💾 **Chat History** — multiple conversations saved in localStorage, switchable from sidebar
+- 🔍 **Search Chats** — search through your conversation history
+- 📋 **Copy / Like / Save** — message action buttons on hover
+- 📤 **Export Chat** — download as `.txt` or print-ready `.html`
+- ⌨️ **Auto-resize Input** — textarea grows as you type, just like ChatGPT
+- ✨ **Typing Indicator** — animated dots while AI is thinking
+- 📎 **Image Upload** — attach images to your messages
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Getting Started
 
-### `npm test`
+### Prerequisites
+- Node.js 18+
+- A free [Groq API key](https://console.groq.com) (or OpenAI key)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation
 
-### `npm run build`
+```bash
+# Clone the repo
+git clone https://github.com/YOUR_USERNAME/chatsphere.git
+cd chatsphere
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Install dependencies
+npm install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Create .env file
+cp .env.example .env
+# Add your Groq API key inside .env
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Start the development server
+npm start
+```
 
-### `npm run eject`
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🔑 Environment Variables
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Create a `.env` file in the project root:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```env
+# Groq API Key (Free tier — recommended)
+REACT_APP_GROQ_API_KEY=your_groq_api_key_here
 
-## Learn More
+# OpenAI API Key (Optional, paid)
+REACT_APP_OPENAI_API_KEY=your_openai_api_key_here
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Get your free Groq key at → [https://console.groq.com](https://console.groq.com)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 🛠️ Tech Stack
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+| Tech | Purpose |
+|---|---|
+| React 19 | UI framework |
+| Groq Cloud API | AI language model (Llama 3.3 70B) |
+| Pollinations AI | Image generation |
+| react-markdown | Markdown rendering |
+| react-syntax-highlighter | Code block highlighting |
+| lucide-react | Icons |
+| CSS (Vanilla) | Styling — no Tailwind |
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 📁 Project Structure
 
-### Making a Progressive Web App
+```
+src/
+├── App.js          # Main app component
+├── App.css         # All styles
+├── openAi.js       # API handler (Groq / OpenAI)
+├── assets/
+│   ├── chatsphere_logo.png
+│   └── user-icon.png
+└── index.js
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 📸 Preview
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+> Dark mode chat UI with markdown, code blocks, image generation and sidebar history.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📄 License
 
-### `npm run build` fails to minify
+MIT License — free to use and modify.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+Made with ❤️ by Divya Mishra
